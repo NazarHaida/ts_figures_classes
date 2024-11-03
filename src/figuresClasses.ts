@@ -6,11 +6,11 @@ export interface Figure {
 
 export class Triangle implements Figure {
   constructor(
-    public color: string,
+    public color: 'red' | 'green' | 'blue',
     public a: number,
     public b: number,
     public c: number,
-    public shape: string = 'triangle',
+    public shape: 'triangle' = 'triangle',
   ) {
     if (this.a <= 0 || this.b <= 0 || this.c <= 0) {
       throw new Error('your error message');
@@ -35,9 +35,9 @@ export class Triangle implements Figure {
 
 export class Circle implements Figure {
   constructor(
-    public color: string,
+    public color: 'red' | 'green' | 'blue',
     public radius: number,
-    public shape: string = 'circle',
+    public shape: 'circle' = 'circle',
   ) {
     if (this.radius <= 0) {
       throw new Error('your error message');
@@ -53,10 +53,10 @@ export class Circle implements Figure {
 
 export class Rectangle implements Figure {
   constructor(
-    public color: string,
+    public color: 'red' | 'green' | 'blue',
     public height: number,
     public width: number,
-    public shape: string = 'rectangle',
+    public shape: 'rectangle' = 'rectangle',
   ) {
     if (this.height <= 0 || this.width <= 0) {
       throw new Error('your error message');
